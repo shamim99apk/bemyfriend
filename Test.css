@@ -9,7 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     background-size: contain;
-    background-image: url('../images/atika.jpg');
+    background-image: url('./images/atika.jpg');
 
     position: relative;
 }
