@@ -9,7 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     background-size: contain;
-    background-image: url('../favicon/303908632_1290811205032398_2160542538272127571_n.jpg');
+    background-image: url('./images/303908632_1290811205032398_2160542538272127571_n.jpg');
 
     position: relative;
 }
