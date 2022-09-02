@@ -18,89 +18,87 @@ proposeBtn = document.querySelector('#propose-btn');
 
 // VERIFYING THE LINK
 if (link.indexOf('#') != -1 && link.indexOf('#') != link.length - 1) {
-  // HIDING HADER AND SHOWING THE MAIN SECTION
-  document.getElementById('header').classList.add('hide');
-  document.getElementById('footer').classList.add('hide');
-  document.getElementById('main').classList.remove('hide');
-  // GETTING THE TITLE FROM LINK
-  link = link.slice(link.indexOf('#') + 1);
-  title.innerHTML = link;
+    // HIDING HADER AND SHOWING THE MAIN SECTION
+    document.getElementById('header').classList.add('hide');
+    document.getElementById('footer').classList.add('hide');
+    document.getElementById('main').classList.remove('hide');
+    // GETTING THE TITLE FROM LINK
+    link = link.slice(link.indexOf('#') + 1);
+    title.innerHTML = link;
 }
 
 // LINES THAT ARE STORING IN A ARRAY
 var lines = [
-  'Kire iphone brandwali chole ashchis je toke propose kortechi naki?',
-  'Kono prokar asha ba prottasha noi life ar ai time a ashe bujte parlam asholei toke ami anek valobashi. Tor sathe thakte, gurte,dekte prottek ta moment amar jonno special. Kichu jinish ache nah vitor theke ashe thats the thing about you. I really love you   ',
-  'Kecha laga mera majag? *_*',
-  'Shon, Kokonoi vanbo na amader bondhutto',
-  'I am grateful for your true friendship. Hope your life will be full of joy and happiness',
-  'And if you get any trouble, always remember me. I always there for you',
-  'Kire akhno ki dekish. Ja vaaag. Ar bolish kemon laglo',
+    'Believe it or not, you are the most prettiest girl I have ever met. You are and will always be my favorite ❤',
+    'Ever since I have I met you, I find myself smiling for no reason when simply looking at you. Your beauty, strength, and love fill me with happiness.',
+    'I cannot promise to solve all your problems, but I promise you that I will always be there for you.',
+    'Dear my favourite, There is always a person who sits down with you. Whether there is storm coming or it rains throughout the night, that person will always be there for you. Keep that person will always be there for you',
+    'Just one pure friendship can save you a million times in one lifetime. You keep meeting people. You call them friends. But are they? very rarely in life you will make a real friend. So if you have one, value the friend. And i want to be that friend. So can you please accept me as that friend ?',
 ];
 
 // MAKING FUNCTIONS
 
 function load() {
-  //MAKING BASIC ANIMATION
-  content.classList.add('content-anim');
-  txt.innerHTML = lines[index];
-  setTimeout(() => {
-    content.classList.remove('content-anim');
-  }, 500);
+    //MAKING BASIC ANIMATION
+    content.classList.add('content-anim');
+    txt.innerHTML = lines[index];
+    setTimeout(() => {
+        content.classList.remove('content-anim');
+    }, 500);
 
-  // WHILE INDEX REACH THE MAXIMUM NUMBER OF LINE
-  if (index == lines.length - 1) {
-    // STOP INCREASING INDEX
-    index = lines.length - 1;
-  } else {
-    // OTHERWISE INCREASING IT
-    index++;
-  }
+    // WHILE INDEX REACH THE MAXIMUM NUMBER OF LINE
+    if (index == lines.length - 1) {
+        // STOP INCREASING INDEX
+        index = lines.length - 1;
+    } else {
+        // OTHERWISE INCREASING IT
+        index++;
+    }
 }
 
 function generate() {
-  // VALIDATING BUTTON FOR COPY LINK
-  if (popupBtn.innerHTML == 'Copy') {
-    // SELECTING LINK
-    popupInput.select();
-    popupInput.setSelectionRange(0, 99999);
-    // COPYING LINK
-    document.execCommand('copy');
+    // VALIDATING BUTTON FOR COPY LINK
+    if (popupBtn.innerHTML == 'Copy') {
+        // SELECTING LINK
+        popupInput.select();
+        popupInput.setSelectionRange(0, 99999);
+        // COPYING LINK
+        document.execCommand('copy');
 
-    // RESTORING ITEMS
-    popupBtn.innerHTML = 'Submit';
-    popupClose();
-    // ALEART FOR COPYING
-    alert('Link Is Copied \n \nNow Send This To Your Valentine');
-  } else {
-    // VALIDATING INPUT VALUE
-    if (popupInput.value.length != 0) {
-      // CONCATING THE LINK WITH NAME
-      var pageLink = window.location.href + '#' + popupInput.value;
-      popupInput.value = pageLink;
-      // CHANGING BUTTON TEXT FOR COPY
-      popupBtn.innerHTML = 'Copy';
+        // RESTORING ITEMS
+        popupBtn.innerHTML = 'Submit';
+        popupClose();
+        // ALEART FOR COPYING
+        alert('Link Is Copied \n \nNow Send This To Your Valentine');
     } else {
-      // ALEART FOR INVALID INPUT
-      alert('Please Insert A Valid Name');
+        // VALIDATING INPUT VALUE
+        if (popupInput.value.length != 0) {
+            // CONCATING THE LINK WITH NAME
+            var pageLink = window.location.href + '#' + popupInput.value;
+            popupInput.value = pageLink;
+            // CHANGING BUTTON TEXT FOR COPY
+            popupBtn.innerHTML = 'Copy';
+        } else {
+            // ALEART FOR INVALID INPUT
+            alert('Please Insert A Valid Name');
+        }
     }
-  }
 }
 
 function popupOpen() {
-  // MAKING POPUP VISIBLE WITH BASIC ANIMATION
-  form.classList.remove('hide');
-  setTimeout(() => {
-    box.classList.add('box-anim');
-  }, 10);
-  setTimeout(() => {
-    box.classList.remove('box-anim');
-  }, 500);
+    // MAKING POPUP VISIBLE WITH BASIC ANIMATION
+    form.classList.remove('hide');
+    setTimeout(() => {
+        box.classList.add('box-anim');
+    }, 10);
+    setTimeout(() => {
+        box.classList.remove('box-anim');
+    }, 500);
 }
 
 function popupClose() {
-  form.classList.add('hide');
-  popupInput.value = '';
+    form.classList.add('hide');
+    popupInput.value = '';
 }
 
 // CALLING THIS FUNCTION

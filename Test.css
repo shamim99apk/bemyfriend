@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: 'Helvetica Neue', Helvetica, sans-serif;
+}
+.back-img-container {
+    width: 100%;
+    height: 100vh;
+    background-size: contain;
+    background-image: url('/favicon/303908632_1290811205032398_2160542538272127571_n.jpg');
+
+    position: relative;
+}
+.site-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+    width: 90%;
+}
+.site-title h1 {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+.site-title p {
+    margin: 0;
+    text-align: center;
+    color: white;
+    font-size: 1.7rem;
+    background-color: grey;
+    margin-top: 5px;
+}
+.site-title .btn-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    
+}
+.txt-dc {
+    text-decoration: none;
+    cursor: pointer;
+}
+.site-title button {
+    background-color: #f50057;
+    border: none;
+    color: white;
+    padding: 11px 22px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    font-size: 14px;
+    margin-top: 1rem;
+    border-radius: 36px;
+      cursor: pointer;
+}
+.overlay {
+    background: #00000081;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+}
