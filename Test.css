@@ -9,7 +9,7 @@ body {
     width: 100%;
     height: 100vh;
     background-size: contain;
-    background-image: url('./images/303908632_1290811205032398_2160542538272127571_n.jpg');
+    background-image: url('./images/atika.jpg');
 
     position: relative;
 }
@@ -40,7 +40,6 @@ body {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    
 }
 .txt-dc {
     text-decoration: none;
@@ -57,7 +56,7 @@ body {
     font-size: 14px;
     margin-top: 1rem;
     border-radius: 36px;
-      cursor: pointer;
+    cursor: pointer;
 }
 .overlay {
     background: #00000081;
